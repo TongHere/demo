@@ -50,7 +50,7 @@ def main():
     # Text area for the prompt with pre-filled text
     prompt = st.text_area("Customize your prompt if needed:", 
                           value=st.session_state.prompt,
-                          height=200)
+                          height=180)
 
     # Update session state when the prompt changes
     if prompt != st.session_state.prompt:
