@@ -31,17 +31,17 @@ def main():
     st.title("Add Context Component Prompt")
 
     # Introduction section with red and bold formatting
-    st.markdown("""
-    <style>
-    .red-bold {
-        color: red;
-        font-weight: bold;
-    }
-    </style>
-    <p><span class="red-bold">[ Context ]:</span> Marketing manager at a software company with a new product.</p>
-    <p><span class="red-bold">[ Task ]:</span> Introduce the product to clients and offer a discount.</p>
-    <p><span class="red-bold">[ Completed prompt]:</span> You are Marketing manager. Write an email to potential clients introducing our new software product and offering a special discount for early adopters.</p>
-    """, unsafe_allow_html=True)
+    # st.markdown("""
+    # <style>
+    # .red-bold {
+    #     color: red;
+    #     font-weight: bold;
+    # }
+    # </style>
+    # <p><span class="red-bold">[ Context ]:</span> Marketing manager at a software company with a new product.</p>
+    # <p><span class="red-bold">[ Task ]:</span> Introduce the product to clients and offer a discount.</p>
+    # <p><span class="red-bold">[ Completed prompt]:</span> You are Marketing manager. Write an email to potential clients introducing our new software product and offering a special discount for early adopters.</p>
+    # """, unsafe_allow_html=True)
 
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
