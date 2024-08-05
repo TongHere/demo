@@ -35,7 +35,7 @@ def main():
         st.session_state.prompt = "Give me a fitness training program."
 
     # Small input box for the prompt
-    prompt = st.text_input("Please Enter 'Give me a fitness trainning Program.':", 
+    prompt = st.text_input("Please click Run.", 
                            value=st.session_state.prompt,
                            placeholder="Give me a fitness training program.")
 
