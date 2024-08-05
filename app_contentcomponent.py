@@ -26,7 +26,7 @@ def generate_gpt_response(prompt):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖")
+    st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖",layout="wide")
     # Introduction section with red and bold formatting
     # st.markdown("""
     # <style>
@@ -56,6 +56,13 @@ def main():
     # Custom CSS for the red button with white text
     st.markdown("""
         <style>
+        .reportview-container .main .block-container {
+        max-width: 1000px;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+    }
         .stButton > button {
             color: white;
             background-color: red;
