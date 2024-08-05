@@ -40,16 +40,14 @@ def main():
     </style>
     <p><span class="red-bold">[ Context ]:</span> Marketing manager at a software company with a new product.</p>
     <p><span class="red-bold">[ Task ]:</span> Introduce the product to clients and offer a discount.</p>
+    <p><span class="red-bold">[ Completed prompt]:</span> You are Marketing manager. Write an email to potential clients introducing our new software product and offering a special discount for early adopters.</p>
     """, unsafe_allow_html=True)
 
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
         st.session_state.prompt = """
-[ Context ]: Marketing manager at a software company with a new product.
-[ Task ]: Introduce the product to clients and offer a discount.
-
-Write an email to potential clients introducing our new software product and offering a special discount for early adopters.
-"""
+        You are Marketing manager. 
+        Write an email to potential clients introducing our new software product and offering a special discount for early adopters."""
 
     # Text area for the prompt with pre-filled text
     prompt = st.text_area("Customize your prompt if needed:", 
