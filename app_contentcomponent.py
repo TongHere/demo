@@ -50,7 +50,7 @@ def main():
     # Text area for the prompt with pre-filled text
     prompt = st.text_area("Please click Run:", 
                           value=st.session_state.prompt,
-                          height=120)
+                          height=100)
 
     # Update session state when the prompt changes
     if prompt != st.session_state.prompt:
