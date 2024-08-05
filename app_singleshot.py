@@ -29,7 +29,7 @@ def main():
     st.set_page_config(page_title="Single-Shot Prompt", page_icon="🤖")
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = "Write an email.Email length limits to 300 words"
+        st.session_state.prompt = "Write an email.Email length limits to 250 words"
 
     # Small input box for the prompt
     prompt = st.text_input("Please click Run.", 
