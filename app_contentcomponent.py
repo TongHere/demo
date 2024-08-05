@@ -27,9 +27,6 @@ def generate_gpt_response(prompt):
 def main():
     load_dotenv()
     st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖")
-
-    st.title("Add Context Component Prompt")
-
     # Introduction section with red and bold formatting
     # st.markdown("""
     # <style>
