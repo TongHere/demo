@@ -9,7 +9,7 @@ load_dotenv()
 
 def generate_gpt_response(prompt):
     try:
-        llm = ChatOpenAI(model='gpt-4', temperature=0.7)
+        llm = ChatOpenAI(model='gpt-4o', temperature=0.7)
         
         prompt_template = PromptTemplate(
             input_variables=["prompt"],
