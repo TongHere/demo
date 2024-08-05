@@ -26,13 +26,18 @@ def generate_gpt_response(prompt):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Single-Shot Prompt", page_icon="🤖")
+    st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖")
 
-    st.title("Single-Shot Prompt")
+    st.title("Context Component Prompt")
 
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = "Write an email."
+        st.session_state.prompt = """
+**[ Context ]:** Marketing manager at a software company with a new product. 
+**[ Task ]:** Introduce the product to clients and offer a discount.
+
+Write an email to potential clients introducing our new software product and offering a special discount for early adopters.
+"""
 
     # Small input box for the prompt
     prompt = st.text_input("Please click Run.", 
