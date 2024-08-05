@@ -32,12 +32,12 @@ def main():
 
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = "Write a marketing article."
+        st.session_state.prompt = "Write an email."
 
     # Small input box for the prompt
     prompt = st.text_input("Please click Run.", 
                            value=st.session_state.prompt,
-                           placeholder="Write a marketing article.")
+                           placeholder="Write an email.")
 
 
     # Update session state when the prompt changes
