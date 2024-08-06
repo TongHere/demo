@@ -70,7 +70,6 @@ def main():
             with st.spinner("Generating response..."):
                 response = generate_gpt_response(st.session_state.prompt)
                 if response:
-                    st.subheader("Generated Response:")
                     st.write(response)
         else:
             st.warning("Please enter a prompt before running.")
