@@ -28,7 +28,7 @@ def main():
     load_dotenv()
     st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖",layout="wide")
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = """As a marketing manager, write a brief email to potential clients to introduce our new software product. Include a special discount offer for early adopters. Use bullet points like:
+        st.session_state.prompt = """As a marketing manager, write a really short email to potential clients to introduce our new software product. Include a special discount offer for early adopters. Use bullet points like:
 Achieved [Objective] by implementing [Action/Measure], resulting in [Outcome/Impact].
 """
 
