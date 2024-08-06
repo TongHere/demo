@@ -27,22 +27,8 @@ def generate_gpt_response(prompt):
 def main():
     load_dotenv()
     st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖",layout="wide")
-    # Introduction section with red and bold formatting
-    # st.markdown("""
-    # <style>
-    # .red-bold {
-    #     color: red;
-    #     font-weight: bold;
-    # }
-    # </style>
-    # <p><span class="red-bold">[ Context ]:</span> Marketing manager at a software company with a new product.</p>
-    # <p><span class="red-bold">[ Task ]:</span> Introduce the product to clients and offer a discount.</p>
-    # <p><span class="red-bold">[ Completed prompt]:</span> You are Marketing manager. Write an email to potential clients introducing our new software product and offering a special discount for early adopters.</p>
-    # """, unsafe_allow_html=True)
-
-    # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = """You are Marketing manager. Write a short email to potential clients introducing our new software product and offering a special discount for early adopters."""
+        st.session_state.prompt = """Briefly introducing our new software product and offering a special discount for early adopters to potential clients"""
 
     # Text area for the prompt with pre-filled text
     prompt = st.text_area("Please click Run:", 
