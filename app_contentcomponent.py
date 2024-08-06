@@ -82,7 +82,6 @@ def main():
             with st.spinner("Generating email..."):
                 response = generate_gpt_response(st.session_state.prompt)
                 if response:
-                    st.subheader("Generated Email:")
                     st.write(response)
         else:
             st.warning("Please enter a prompt before generating the email.")
