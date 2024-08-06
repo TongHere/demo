@@ -29,8 +29,7 @@ def main():
     st.set_page_config(page_title="Add Optional Components", page_icon="🤖",layout="wide")
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = """As a marketing manager, write a really short email to potential clients to introduce our new software product. Include a special discount offer for early adopters. Use bullet points like:
-Achieved [Objective] by implementing [Action/Measure], resulting in [Outcome/Impact]."""
+        st.session_state.prompt = """As a marketing manager, craft a really short email to potential clients introducing our new software product. Include a special discount offer for early adopters. Use bullet points such as: Achieved [Objective] by implementing [Action/Measure], resulting in [Outcome/Impact]. Maintain a professional and persuasive tone."""
 
     # Text area for the prompt with pre-filled text
     prompt = st.text_area("Please click Run:", 
