@@ -26,20 +26,21 @@ def generate_gpt_response(prompt):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Single-Shot Prompt", page_icon="🤖",layout="wide")
+    st.set_page_config(page_title="Add Optional Components", page_icon="🤖",layout="wide")
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = "Write an short email."
+        st.session_state.prompt = """As a marketing manager, write a really short email to potential clients to introduce our new software product. Include a special discount offer for early adopters. Use bullet points like:
+Achieved [Objective] by implementing [Action/Measure], resulting in [Outcome/Impact]."""
 
-    # Small input box for the prompt
-    prompt = st.text_input("Please click Run.", 
-                           value=st.session_state.prompt,
-                           placeholder="Write an short email.")
-
+    # Text area for the prompt with pre-filled text
+    prompt = st.text_area("Please click Run:", 
+                          value=st.session_state.prompt,
+                          height=100)
 
     # Update session state when the prompt changes
     if prompt != st.session_state.prompt:
         st.session_state.prompt = prompt
+
 
     # Custom CSS for the red button with white text
     st.markdown("""
