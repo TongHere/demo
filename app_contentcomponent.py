@@ -42,7 +42,7 @@ def main():
 
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = """You are Marketing manager. Write an email to potential clients introducing our new software product and offering a special discount for early adopters. Email length limits to 250 words"""
+        st.session_state.prompt = """You are Marketing manager. Write an short email to potential clients introducing our new software product and offering a special discount for early adopters."""
 
     # Text area for the prompt with pre-filled text
     prompt = st.text_area("Please click Run:", 
