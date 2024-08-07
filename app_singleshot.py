@@ -26,15 +26,15 @@ def generate_gpt_response(prompt):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Single-Shot Prompt", page_icon="🤖",layout="wide")
+    st.set_page_config(page_title="Try to write and run your own prompt to test. ", page_icon="🤖",layout="wide")
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = "Write an short email."
+        st.session_state.prompt = ""
 
     # Small input box for the prompt
-    prompt = st.text_input("Please click Run.", 
+    prompt = st.text_input("Try to write and run your own prompt to test.", 
                            value=st.session_state.prompt,
-                           placeholder="Write an short email.")
+                           placeholder="")
 
 
     # Update session state when the prompt changes
