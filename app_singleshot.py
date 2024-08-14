@@ -9,7 +9,7 @@ load_dotenv()
 
 def generate_gpt_response(prompt):
     try:
-        llm = ChatOpenAI(model='gpt-4', temperature=0.7)
+        llm = ChatOpenAI(model='gpt-4o', temperature=0.7)
         
         prompt_template = PromptTemplate(
             input_variables=["prompt"],
@@ -26,7 +26,7 @@ def generate_gpt_response(prompt):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖",layout="wide")
+    st.set_page_config(page_title="Demo", page_icon="🤖",layout="wide")
     if 'prompt' not in st.session_state:
         st.session_state.prompt = """As a marketing manager, write a short introduction for our new software product and offer a special discount for early adopters to potential clients. Use bullet points like: Achieved Objective by implementing Action/Measure, resulting in Outcome/Impact.
 """
