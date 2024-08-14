@@ -26,7 +26,7 @@ def generate_gpt_response(prompt):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖",layout="wide")
+    st.set_page_config(page_title="Demo", page_icon="🤖",layout="wide")
     if 'prompt' not in st.session_state:
         st.session_state.prompt = """Kurze Vorstellung unseres neuen Softwareprodukts und Angebot eines speziellen Rabatts für frühe Anwender an potenzielle Kunden.
 """
