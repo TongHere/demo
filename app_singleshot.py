@@ -31,7 +31,7 @@ def main():
         st.session_state.prompt = """ """
 
     # Text area for the prompt with pre-filled text
-    prompt = st.text_area("Versuchen Sie, einen eigenen Prompt zu schreiben und auszuführen, um ihn zu testen.", 
+    prompt = st.text_area("Versuchen Sie zum Testen, Ihren eigenen Prompt zu schreiben und auszuführen.", 
                           value=st.session_state.prompt,
                           height=100)
 
