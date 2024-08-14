@@ -66,7 +66,7 @@ def main():
     # Run button
     if st.button("Los"):
         if st.session_state.prompt:
-            with st.spinner("Generating response..."):
+            with st.spinner("Antwort wird generiert...."):
                 response = generate_gpt_response(st.session_state.prompt)
                 if response:
                     st.write(response)
