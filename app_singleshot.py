@@ -9,7 +9,7 @@ load_dotenv()
 
 def generate_gpt_response(prompt):
     try:
-        llm = ChatOpenAI(model='gpt-4', temperature=0.7)
+        llm = ChatOpenAI(model='gpt-4o', temperature=0.7)
         
         prompt_template = PromptTemplate(
             input_variables=["prompt"],
@@ -26,16 +26,15 @@ def generate_gpt_response(prompt):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Single-Shot Prompt", page_icon="🤖",layout="wide")
-    # Initialize session state for the prompt if it doesn't exist
+    st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖",layout="wide")
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = "Write a short email."
+        st.session_state.prompt = """Kurze Vorstellung unseres neuen Softwareprodukts und Angebot eines speziellen Rabatts für frühe Anwender an potenzielle Kunden.
+"""
 
-    # Small input box for the prompt
-    prompt = st.text_input("Please click Run.", 
-                           value=st.session_state.prompt,
-                           placeholder="Write an short email.")
-
+    # Text area for the prompt with pre-filled text
+    prompt = st.text_area("Bitte klicken Sie Los", 
+                          value=st.session_state.prompt,
+                          height=100)
 
     # Update session state when the prompt changes
     if prompt != st.session_state.prompt:
@@ -65,7 +64,7 @@ def main():
     """, unsafe_allow_html=True)
 
     # Run button
-    if st.button("Run"):
+    if st.button("Los"):
         if st.session_state.prompt:
             with st.spinner("Generating response..."):
                 response = generate_gpt_response(st.session_state.prompt)
