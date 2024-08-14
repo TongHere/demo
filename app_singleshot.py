@@ -9,7 +9,7 @@ load_dotenv()
 
 def generate_gpt_response(prompt):
     try:
-        llm = ChatOpenAI(model='gpt-4', temperature=0.7)
+        llm = ChatOpenAI(model='gpt-4o', temperature=0.7)
         
         prompt_template = PromptTemplate(
             input_variables=["prompt"],
@@ -26,7 +26,7 @@ def generate_gpt_response(prompt):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Add Optional Components", page_icon="🤖",layout="wide")
+    st.set_page_config(page_title="Demo", page_icon="🤖",layout="wide")
     # Initialize session state for the prompt if it doesn't exist
     if 'prompt' not in st.session_state:
         st.session_state.prompt = """As a marketing manager, craft a really short email introducing our new software product to potential clients. Include a special discount offer for early adopters. Use bullet points such as: Achieved Objective by implementing Action/Measure, resulting in Outcome/Impact. Maintain a funny and interesting tone."""
