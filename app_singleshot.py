@@ -28,11 +28,10 @@ def main():
     load_dotenv()
     st.set_page_config(page_title="Add Context Component Prompt", page_icon="🤖",layout="wide")
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = """Stelle als Marketingmanager kurz unser neues Softwareprodukt potenziellen Kunden vor und biete einen speziellen Rabatt für frühe Anwender an. Einen speziellen Rabatt für frühe Anwender einschließen. Verwenden Sie Aufzählungspunkte wie: Ziel erreicht durch Umsetzung von Aktion/Maßnahme, resultierend in Ergebnis/Auswirkung.
-"""
+        st.session_state.prompt = """ """
 
     # Text area for the prompt with pre-filled text
-    prompt = st.text_area("Bitte klicken Sie Los", 
+    prompt = st.text_area("Versuchen Sie, einen eigenen Prompt zu schreiben und auszuführen, um ihn zu testen.", 
                           value=st.session_state.prompt,
                           height=100)
 
