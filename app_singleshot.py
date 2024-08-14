@@ -28,7 +28,7 @@ def main():
     load_dotenv()
     st.set_page_config(page_title="Demo", page_icon="🤖",layout="wide")
     if 'prompt' not in st.session_state:
-        st.session_state.prompt = """Marketingmanager eine sehr kurze E-Mail an potenzielle Kunden, die unser neues Softwareprodukt vorstellt.Schließe einen speziellen Rabatt für frühe Anwender ein. Verwende Aufzählungspunkte wie: Erreichtes Ziel durch Aktion/Maßnahme, resultierend in Ergebnis/Auswirkung. Behalte einen lustigen und interessanten Ton bei.
+        st.session_state.prompt = """Verfasse als Marketingmanager eine sehr kurze E-Mail an potenzielle Kunden, die unser neues Softwareprodukt vorstellt. Schließe einen speziellen Rabatt für frühe Anwender ein. Verwende Aufzählungspunkte wie: Erreichtes Ziel durch Aktion/Maßnahme, resultierend in Ergebnis/Auswirkung. Behalte einen lustigen und interessanten Ton bei.
 """
 
     # Text area for the prompt with pre-filled text
