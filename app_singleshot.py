@@ -71,7 +71,7 @@ def main():
                 if response:
                     st.write(response)
         else:
-            st.warning("Please enter a prompt before running.")
+            st.warning("Bitte geben Sie eine Eingabe ein, bevor Sie fortfahren.")
 
 if __name__ == '__main__':
     main()
